@@ -1,0 +1,498 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo variáveis de cor */
+:root {
+    --primary-color: rgb(23, 145, 238);
+    --dark-color: #0f0f0f;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: var(--dark-color); /* Usando a variável de cor definida */
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+button{
+
+border: none;
+background-color: transparent;
+
+
+}
+.btn {
+    background-color: var(--primary-color);
+    padding: 0.8rem 1rem;
+    min-width: 140px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn:hover { /* Corrigido de :houver para :hover */
+    background-color: rgb(149, 124, 239);
+}
+
+.section-title {
+    text-align: center;
+    color: #fff; /* Moved color to be within .section-title */
+}
+
+.section-title span {
+    color: var(--dark-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu {
+    font-size: 20px;
+    color: #0f0f0f;
+}
+
+/* Começo do navbar */
+.inner-content {
+    max-width: 1200px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+nav {
+    background-color: #fff;
+    color: var(--dark-color);
+    box-shadow: 0px 5px 10px #ffffff36;
+}
+
+/* Estilo adicional para o conteúdo do navbar */
+nav .inner-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+nav ul li:hover {
+    color: var(--primary-color);
+    transition: all 0.2s;
+    transform: translateY(-4px);
+}
+
+.social-icons {
+    font-size: 2rem;
+}
+
+/* Começo do header */
+header {
+    padding-block: 2rem;
+}
+
+header .inner-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+    min-height: 60vh;
+}
+
+header .left-side {
+    display: grid;
+    gap: 1rem;
+}
+
+header .left-side h2 {
+    font-size: 3rem;
+}
+
+header .left-side h2 span {
+    color: var(--primary-color);
+}
+header .left-side .links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Estilos para links dentro da seção "trust" */
+  #trust .right-side .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+
+header .right-side {
+    text-align: center;
+}
+
+header .right-side img {
+    max-width: 420px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+}
+
+/* Fim do header */
+#services { /* Corrigido de #sevices para #services */
+    background-color: var(--primary-color);
+    padding-block: 1rem;
+}
+
+#services .services { /* Corrigido para #services .services */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Corrigido para criar 3 colunas */
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+#services .services .service {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#services .services .service img {
+    width: 100%; 
+    border-radius: 8px;
+}
+
+#services .services .service h3 {
+    padding-block: 0.5rem; /* Corrigido para adicionar padding-block */
+}
+
+/* Começo da seção de serviços */
+
+/*COMEÇO DA SECÇÃO DE CONFIANÇA*/
+
+#trust .inner-content { /* Corrigido para #trust .inner-content */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+#trust .left-side{
+
+
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.trust .right-side {
+    padding-block: 4rem;
+  }
+  
+  .trust .right-side h2 {
+    padding-block: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .trust .right-side h2 span {
+    color: var(--primary-color);
+  }
+#trust .trust-cards{
+
+    display: grid;
+    padding-bottom: 2rem;
+}  
+#trust .trust-cards .card{
+
+display: flex;
+align-items: center;
+gap:1rem;
+padding: 1rem;
+border-bottom: 1px dashed var(--primary-color);
+
+}
+#trust .trust-cards .card i{
+
+color: var(--primary-color);
+font-size: 2rem;
+
+}
+#trust .trust-cards .card .description p{
+
+
+padding-top: 1.5rem;
+
+}
+#trust{
+
+padding-block: 1rem;
+
+}
+#trust .brands{
+
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns:5 1fr;
+
+}#brands {
+    padding-top: 1rem;
+}
+
+#brands .brands {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+#brands .brands img {
+    max-width: 80%;
+    height: auto; /* Mantém a proporção das imagens */
+    display: block; 
+    /* Remove qualquer espaçamento extra em torno da imagem */
+}
+/* FIM DA SECÇÃO DE CONFIANÇA */
+
+/* COMEÇO DA SECÇÃO DE CONTATOS*/
+
+#contact{
+
+padding-block: 2rem;
+
+    }
+    #contact .section-description{
+
+padding-block: 1rem;
+text-align: center;
+
+    }
+    #contact form{
+
+max-width: 800px;
+margin-inline: auto;
+
+    }
+    #contact form .form-group{
+
+display: flex;
+gap:1rem;
+padding-bottom: 1rem;
+
+
+    }
+    #contact form input,
+    #contact form textarea{
+
+width: 100%;
+padding:  0.8rem  1rem;
+
+    }
+    #contact form button{
+
+
+        margin-inline: auto;
+        margin-top: 1rem;
+        display: block;
+    }
+
+
+/* FIM DA SECÇÃO DE CONTATOS*/
+
+/*COMEÇO DOFOOTER*/
+
+#portfolio {
+    background-color: #fff;
+    padding-block: 2rem;
+}
+
+#portfolio .projects {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Corrigido */
+    gap: 1rem;
+}
+
+#portfolio .projects .project {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--dark-color);
+}
+
+#portfolio .projects .project h3 {
+    color: blue;
+}
+
+#portfolio .projects .project img {
+    width: 100%;
+    border-radius: 8px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.social-icons li {
+    margin: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347; /* Altere a cor conforme necessário */
+}
+/*FIM DO FOOTER*/
+footer {
+    background: #333;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    nav .inner-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    header .inner-content {
+        grid-template-columns: 1fr;
+    }
+
+    header .left-side {
+        text-align: center;
+    }
+
+    header .right-side img {
+        max-width: 300px;
+    }
+
+    #services .services {
+        grid-template-columns: 1fr;
+    }
+
+    #trust .inner-content {
+        grid-template-columns: 1fr;
+    }
+
+    #brands .brands {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        font-size: 1.5rem;
+    }
+
+    header .left-side h2 {
+        font-size: 2.5rem;
+    }
+
+    header .left-side .links {
+        flex-direction: column;
+    }
+
+    header .right-side img {
+        max-width: 250px;
+    }
+
+    #services .services {
+        grid-template-columns: 1fr;
+    }
+
+    #trust .trust-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form .form-group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        font-size: 1.2rem;
+    }
+
+    header .left-side h2 {
+        font-size: 2rem;
+    }
+
+    header .right-side img {
+        max-width: 200px;
+    }
+
+    #services .services {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 0.9rem;
+    }
+
+    #contact form .form-group {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        font-size: 1.5rem;
+    }
+}
+
+/*TRSPONSIVIDADE*/
